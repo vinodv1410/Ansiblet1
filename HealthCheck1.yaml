@@ -1,6 +1,6 @@
 - name: Gather system facts
   hosts: all
-  remote_users: ubuntu
+  remote_user: ubuntu
   gather_facts: yes
   tasks:
   - name: Get uptime
