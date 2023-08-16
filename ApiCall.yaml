@@ -3,8 +3,6 @@
   hosts: localhost
   gather_facts: false
   tasks:
-    - debug:
-        msg: "api call"
     - name: Login to api
       uri:
         url: https://capeumsp.service-now.com
@@ -16,4 +14,5 @@
       name: asr.engineer
       password: asr.engineer
       register: response
-
+   - debug:
+        msg: "api call"
