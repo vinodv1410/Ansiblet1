@@ -10,6 +10,11 @@
     url: https://capeumsp.service-now.com/api/now/table/incident?
       sysparm_query=%5Ecompany=490adcc7dbbb88103a9d65b3059619cfshort_descriptionLIKEDisk%5EORshort_descriptionLIKEcpu&sysparm_fields=number%2Csys_id%2Cdescription%2Cshort_description
     method: GET
-  name: your_username
-  password: your_password
+    headers:
+      Content-Type: "application/json"
+    body_format: json
+    status_code: 200
+    name: asr.engineer
+    password: asr.engineer
+  register: response
 
