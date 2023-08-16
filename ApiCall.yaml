@@ -6,12 +6,12 @@
     - name: Login to api
       uri:
         url: https://capeumsp.service-now.com
-      method: GET
-      headers:
-        Content-Type: "application/json"
-      body_format: json
-      status_code: 200
-      name: asr.engineer
-      password: asr.engineer
+        method: GET
+        headers:
+          Content-Type: "application/json"
+        body_format: json
+        status_code: 200
+        name: asr.engineer
+        password: asr.engineer
       register: response
    
