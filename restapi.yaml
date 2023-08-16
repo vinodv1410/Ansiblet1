@@ -1,0 +1,17 @@
+- name: Rest api call
+  hosts: localhost
+  connection: local
+  user: asr.engineer
+  password: asr.enginner
+  vars_files: 
+    - vars_files/creds.yml
+
+
+tasks: 
+  - name: make a api call
+    uri:
+      url: "https://capeumsp.service-now.com/api/now/table/incident?
+      sysparm_query=%5Ecompany=490adcc7dbbb88103a9d65b3059619cfshort_descriptionLIKEDisk%5EORshort_descriptionLIKEcpu&sysparm_fields=number%2Csys_id%2Cdescription%2Cshort_description"
+    validate_certs: false
+    user: "{{ user }}"
+    password: "{{ password }}"
