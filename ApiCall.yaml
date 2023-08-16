@@ -4,9 +4,9 @@
   gather_facts: false
   tasks:
     - debug:
-        msg: “Let’s call an API”
+        msg: "api call"
 - name: Login to api
-  uri:
+  ansible.builtin.uri:
     url: https://capeumsp.service-now.com/api/now/table/incident?
       sysparm_query=%5Ecompany=490adcc7dbbb88103a9d65b3059619cfshort_descriptionLIKEDisk%5EORshort_descriptionLIKEcpu&sysparm_fields=number%2Csys_id%2Cdescription%2Cshort_description
     method: GET
