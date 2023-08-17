@@ -5,7 +5,7 @@
   tasks:
     - name: Login to api
       uri:
-        url: https://capeumsptest.service-now.com
+        url: https://capeumsptest.service-now.com/api/now/table/incident?number=INC5239025
         method: GET
         headers:
           Content-Type: "application/json"
