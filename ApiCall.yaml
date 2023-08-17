@@ -6,14 +6,14 @@
   tasks:
     - name: Login to api
       uri:
-        url: https://capeumsptest.service-now.com/api/now/table/incident?number=INC5239025
+        url: https://dev157152.service-now.com/api/now/table/sc_task?number=TASK0000001
         method: GET
         headers:
           Content-Type: application/json
         body_format: json
         status_code: 200
-        user: asr.engineer
-        password: asr.engineer
+        user: admin
+        password: r7OzdV%7Io*S
       register: response
     - debug:
         var: response
