@@ -1,3 +1,4 @@
+---
 - name: Using a REST API
   become: false
   hosts: localhost
@@ -8,14 +9,11 @@
         url: https://capeumsptest.service-now.com/api/now/table/incident?number=INC5239025
         method: GET
         headers:
-          Content-Type: "application/json"
+          Content-Type: application/json
         body_format: json
         status_code: 200
         user: asr.engineer
         password: asr.engineer
       register: response
-   - debug:
-       var: response
-      
-      
-   
+    - debug:
+        var: response
