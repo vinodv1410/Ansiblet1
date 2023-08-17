@@ -15,7 +15,5 @@
         password: asr.engineer
       register: response
       var: response
-    - name: debug message
-      ansible.builtin.debug:
-        msg: "json payload for the incident {{ response }}"
+      
    
